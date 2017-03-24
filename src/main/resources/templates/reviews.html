@@ -1,0 +1,35 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Review</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div class="content">
+
+	<h1>Review</h1>
+		<div class="col-sm-6 col-md-4">
+		    <p th:text="'ID: ' + ${review.id}" />
+		    <p th:text = "'content: ' + ${review.content}"/>
+		    <p th:text="'Title: ' + ${review.title}" />
+		    <p th: text="'Review Category: ' + ${review.reviewCategory}"/>
+		    
+		</div>
+		<li>
+			<a href="http://localhost:8080/showReviews">Reviews</a>
+		</li>
+		<h1 style="text-align:center">chose one categories</h1>
+		    <ul>
+		    	<li id="each=" th:each="cattegory: ${categories}"><a th:text="${cattegory.title}"
+		    	th:href="@{http://localhost:8080/showCategory(id=${category.id})}"/>
+		    	</li>
+		    </ul>
+		<div class="col-sm-6 col-md-8">
+			<img th:src="${review.imagUrl}>" class="img-rounded" alt="M1" width="#" height="#"/>
+		</div>
+
+    	<script src="http:// code.jquery.com/jquery.js" "></script>
+    	<script src="/js/bootstrap.main.js>"></script>
+</body>
+</html>

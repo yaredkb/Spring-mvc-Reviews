@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>category</title>
+</head>
+<body>
+
+<p th:each="category: ${categoriesAttribute}"><a th:text="${category.name}" th:href="@{/showReview(id=${review.id}0}"/> </p>
+
+</body>
+</html>
